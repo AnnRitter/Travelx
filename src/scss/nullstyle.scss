@@ -1,0 +1,91 @@
+* {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 1.2;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	border: 0 none;
+	// outline: 1px solid red;
+	color: #2D2D2D;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+table,
+th,
+td,
+embed,
+object {
+	padding: 0;
+	margin: 0;
+}
+
+a img,
+:link img,
+:visited img {
+	border: 0;
+	
+}
+
+a,
+ins {
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	padding: 0;
+	border: none;
+}
+
+img {
+	display: block;
+}
+
+p,
+span {
+	display: block;
+}
