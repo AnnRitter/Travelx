@@ -9,6 +9,7 @@ import {html} from './gulp/tasks/html.js'
 import {copyImages} from './gulp/tasks/copy.js'
 import {copyFonts} from './gulp/tasks/copy.js'
 import {js} from './gulp/tasks/js.js'
+import {copyLibs} from './gulp/tasks/copy.js'
 
 // импорт плагинов 
 import {plugins} from './gulp/config/plugins.js'
@@ -30,10 +31,11 @@ function watcher() {
     gulp.watch(path.watch.scss, scss)
 		gulp.watch(path.watch.js, js)
     gulp.watch(path.watch.images, copyImages)
+    gulp.watch(path.watch.libs, copyLibs)
 }
 
 // построение сценариев выполнения задач (будет два режима dev И prod)
-const mainTasks = gulp.parallel(copy, copyImages, copyFonts, html, scss, js)
+const mainTasks = gulp.parallel(copy, copyImages, copyFonts, copyLibs, html, scss, js)
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 

@@ -8,6 +8,7 @@ const srcFolder = `./src`
 export const path = {
 	build: {
 		js: `${buildFolder}/js/`,
+		libs: `${buildFolder}/js/libs/`,
 		css: `${buildFolder}/css/`,
 		html: `${buildFolder}/`,
 		files: `${buildFolder}/files/`,
@@ -15,12 +16,13 @@ export const path = {
 		fonts: `${buildFolder}/fonts/`,
 	},
 	src: {
-		js: `${srcFolder}/js/**/*.js`,
+		js: [`${srcFolder}/js/**/*.js`, `!${srcFolder}/js/libs/**/*.*`], //добавлено исключение : [что добавлять, !что не добавлять]
 		scss: `${srcFolder}/scss/style.scss`,
 		html: `${srcFolder}/*.html`,
 		files: `${srcFolder}/files/**/*.*`,
 		images: `${srcFolder}/images/**/*.*`,
 		fonts: `${srcFolder}/fonts/**/*.*`,
+		libs: `${srcFolder}/js/libs/**/*.*`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
@@ -29,6 +31,7 @@ export const path = {
 		files: `${srcFolder}/files/**/*.*`,
 		images: `${srcFolder}/images/**/*.*`,
 		fonts: `${srcFolder}/fonts/**/*.*`,
+		libs: `${srcFolder}/js/libs/**/*.*`,
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,
