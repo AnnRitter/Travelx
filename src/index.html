@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/css/style.min.css">
+	<link rel="stylesheet" href="/css/libs/swiper-bundle.min.css">
 	<title>TravelX</title>
 </head>
 
@@ -36,7 +37,40 @@
 	</header>
 	<main>
 		<section class="explore">
-			<div class="container">
+		
+			<div id="explore__slider-background" class="swiper">
+				
+				<div class="swiper-wrapper">
+				
+					<div class="swiper-slide explore__background">
+						<img src="/images/background_main.jpg" alt="">
+					</div>
+					<div class="swiper-slide explore__background">
+						<img src="/images/background_1.jpg" alt="">
+					</div>
+					<div class="swiper-slide explore__background">
+						<img src="/images/background_2.jpg" alt="">
+					</div>
+					<div class="swiper-slide explore__background">
+						<img src="/images/background_3.jpg" alt="">
+					</div>
+					<div class="swiper-slide explore__background">
+						<img src="/images/background_4.jpg" alt="">
+					</div>
+					...
+				</div>
+				<!-- If we need pagination -->
+				<!-- <div class="swiper-pagination"></div> -->
+
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+
+			<div class="container relative">
 
 				<div class="explore__wrap">
 					<h1></h1>
@@ -60,13 +94,84 @@
 					</ul>
 				</div>
 
-				<ul class="explore__places">
+				<div id="explore__slider-places" class="swiper">
+
+					<div class="swiper-wrapper explore__places">
+
+						<div class="swiper-slide">
+							<div class="explore__place">
+								<img src="/images/pointer.svg" alt="" class="explore__svg">
+								<div class="explore__place-wrap">
+									<p class="explore__name">Trondheim</p>
+									<p class="explore__subtitle">Plan a trip</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="explore__place">
+								<img src="/images/pointer.svg" alt="" class="explore__svg">
+								<div class="explore__place-wrap">
+									<p class="explore__name">Geirangerfjord</p>
+									<p class="explore__subtitle">Plan a trip</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="explore__place">
+								<img src="/images/pointer.svg" alt="" class="explore__svg">
+								<div class="explore__place-wrap">
+									<p class="explore__name">Lofoten</p>
+									<p class="explore__subtitle">Plan a trip</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide explore__place">
+							<div class="explore__place">
+								<img src="/images/pointer.svg" alt="" class="explore__svg">
+								<div class="explore__place-wrap">
+									<p class="explore__name">Bergen</p>
+									<p class="explore__subtitle">Plan a trip</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+
+				<!-- <ul class="explore__places">
 					<li class="explore__place">
-						<img src="" alt="" class="explore__svg">
-						<p class="explore__name"></p>
-						<p class="explore__subtitle"></p>
+						<img src="/images/pointer.svg" alt="" class="explore__svg">
+						<div class="explore__place-wrap">
+							<p class="explore__name">Trondheim</p>
+							<p class="explore__subtitle">Plan a trip</p>
+						</div>
 					</li>
-				</ul>
+					<li class="explore__place">
+						<img src="/images/pointer.svg" alt="" class="explore__svg">
+						<div class="explore__place-wrap">
+							<p class="explore__name">Geirangerfjord</p>
+							<p class="explore__subtitle">Plan a trip</p>
+						</div>
+					</li>
+					<li class="explore__place">
+						<img src="/images/pointer.svg" alt="" class="explore__svg">
+						<div class="explore__place-wrap">
+							<p class="explore__name">Lofoten</p>
+							<p class="explore__subtitle">Plan a trip</p>
+						</div>
+					</li>
+					<li class="explore__place">
+						<img src="/images/pointer.svg" alt="" class="explore__svg">
+						<div class="explore__place-wrap">
+							<p class="explore__name">Bergen</p>
+							<p class="explore__subtitle">Plan a trip</p>
+						</div>
+					</li>
+				</ul> -->
+
+
 				<div class="explore__navigation">
 					<p class="explore__ref">SEE MORE</p>
 					<img class="explore__arrow" src="" alt="">
@@ -75,6 +180,7 @@
 		</section>
 	</main>
 	<footer class="footer"></footer>
+	<script src="/js/libs/swiper-bundle.min.js"></script>
 	<script src="/js/app.min.js"></script>
 </body>
 

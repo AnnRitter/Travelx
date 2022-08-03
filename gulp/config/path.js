@@ -9,6 +9,7 @@ export const path = {
 	build: {
 		js: `${buildFolder}/js/`,
 		libs: `${buildFolder}/js/libs/`,
+		csslibs: `${buildFolder}/css/libs/`,
 		css: `${buildFolder}/css/`,
 		html: `${buildFolder}/`,
 		files: `${buildFolder}/files/`,
@@ -23,6 +24,7 @@ export const path = {
 		images: `${srcFolder}/images/**/*.*`,
 		fonts: `${srcFolder}/fonts/**/*.*`,
 		libs: `${srcFolder}/js/libs/**/*.*`,
+		csslibs: `${srcFolder}/scss/libs/**/*.*`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
@@ -32,6 +34,7 @@ export const path = {
 		images: `${srcFolder}/images/**/*.*`,
 		fonts: `${srcFolder}/fonts/**/*.*`,
 		libs: `${srcFolder}/js/libs/**/*.*`,
+		csslibs: `${srcFolder}/scss/libs/**/*.*`,
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,
