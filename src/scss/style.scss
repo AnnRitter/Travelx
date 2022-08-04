@@ -85,10 +85,9 @@
 
 
 .explore {
-	// background-image: url(/images/background_main.jpg);
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	// width: 100%;
+	// background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 20%, transparent 60%, transparent);
+	// z-index: 3;
+	// height: auto;
 
 	#explore__slider-background {
 		position: absolute;
@@ -105,20 +104,41 @@
 	&__headline {
 		max-width: 1009px;
 		width: 100%;
-		margin: 0 auto 324px;
-		background-image: url(/images/title.svg);
-		height: 313px;
-		background-size: contain;
-		background-repeat: no-repeat;
+		margin: 0 auto 295px;
+		
+
+
 		z-index: 3;
 		position: relative;
 
 	}
 
+	&__subtitle-main {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 500;
+		letter-spacing: .7em;
+	}
+
+	&__title {
+		font-size: 250px;
+		font-weight: 700;
+
+	}
+
+	&__title::first-letter {
+
+		background-image: linear-gradient(45deg, #6D6D6D 10%, #fff 50%, #fff);
+		color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+	}
+
 	&__links {
 		position: absolute;
-		top: 60%;
+		top: 43%;
 		left: 1%;
+		z-index: 3;
 	}
 
 	&__item:not(:last-child) {
@@ -147,8 +167,19 @@
 
 	&__navigation {
 		position: absolute;
-		top: 0;
-		left: 0;
+		display: flex;
+		align-items: center;
+		bottom: 9%;
+		left: 1%;
+		z-index: 3;
+		writing-mode: tb-rl;
+		transform-origin: right;
+		transform: rotate(180deg);
+	}
+
+	&__arrow {
+		transform: rotate(180deg);
+		margin-bottom: 21px;
 	}
 
 	&__name {
@@ -172,6 +203,42 @@
 
 	#explore__slider-places {
 		padding-bottom: 81px;
+		max-width: 1305px;
+		width: 100%;
 	}
 
 }
+
+.sliders-places {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+	font-size: 20px;
+	color: #686B6F;
+}
+
+.places-arrows {
+	position: absolute;
+	bottom: 67%;
+	right: 7%;
+}
+
+.places-button-next {
+	top: 0;
+	right: -65px;
+}
+.places-button-next::before {
+	top: 0;
+	left: 0;
+}
+.swiper-pagination {
+width: 50px;
+position: absolute;
+left: 0;
+top: 0;
+
+}
+
