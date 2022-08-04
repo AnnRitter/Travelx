@@ -31,4 +31,18 @@ const backgroundSwiper = new Swiper('#explore__slider-background', {
 
 });
 
+const activitySwiper = new Swiper('.about__slider', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+	slidesPerView: 4,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.activity__button-next',
+    prevEl: '.activity__button-prev',
+  },
+
+});
+
 console.log('swiper test');

@@ -19,12 +19,12 @@
 
 .header {
 
-	z-index: 2;
+	
 	width: 100%;
 	position: absolute;
 
 	&__navigation {
-
+		z-index: 3;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -105,12 +105,8 @@
 		max-width: 1009px;
 		width: 100%;
 		margin: 0 auto 295px;
-		
-
-
 		z-index: 3;
 		position: relative;
-
 	}
 
 	&__subtitle-main {
@@ -118,12 +114,13 @@
 		font-size: 30px;
 		font-weight: 500;
 		letter-spacing: .7em;
+		color: var(--text-white);
 	}
 
 	&__title {
 		font-size: 250px;
 		font-weight: 700;
-
+		color: var(--text-white);
 	}
 
 	&__title::first-letter {
@@ -180,6 +177,12 @@
 	&__arrow {
 		transform: rotate(180deg);
 		margin-bottom: 21px;
+	}
+
+	&__ref {
+		font-size: 14px;
+		color: var(--text-white);
+		letter-spacing: 0.1em;
 	}
 
 	&__name {
@@ -242,3 +245,81 @@ top: 0;
 
 }
 
+.about {
+	padding-top: 137px;
+padding-bottom: 98px;
+	&__subtitle {
+		font-size: 16px;
+		letter-spacing: 0.6em;
+		text-align: center;
+		color: #474747;
+		margin-bottom: 27px;
+	}
+
+	&__title {
+		font-size: 46px;
+		font-weight: 700;
+		text-align: center;
+		color: #2D2D2D;
+		margin-bottom: 111px;
+	}
+
+	&__slider {
+		max-width: 1479px;
+		width: 100%;
+	}
+
+	&__slide {
+		position: relative;
+	}
+
+	&__content {
+		position: absolute;
+		bottom: 10%;
+		left: 10%;
+	}
+
+	&__activity {
+		font-size: 32px;
+		color: var(--text-white);
+	}
+
+	&__number {
+		font-size: 17px;
+		font-weight: 500;
+		color: var(--text-white);
+	}
+
+	&__slide-1 {
+		background-image: url(/images/picture_1.jpg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		max-width: 351px;
+		width: 100%;
+		height: 620px;
+	}
+	&__slide-2 {
+		background-image: url(/images/picture_2.jpg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		max-width: 351px;
+		width: 100%;
+		height: 620px;
+	}
+	&__slide-3 {
+		background-image: url(/images/picture_3.jpg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		max-width: 351px;
+		width: 100%;
+		height: 620px;
+	}
+	&__slide-4 {
+		background-image: url(/images/picture_4.jpg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		max-width: 351px;
+		width: 100%;
+		height: 620px;
+	}
+}
