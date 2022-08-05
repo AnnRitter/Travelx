@@ -37,20 +37,17 @@
 	</header>
 	<main>
 		<section class="explore">
-
-			<div id="explore__slider-background" class="swiper">
-
+			<div class="swiper explore__slider-background">
 				<div class="swiper-wrapper">
-
 					<div class="swiper-slide explore__background">
 						<img src="/images/background_main.jpg" alt="">
 					</div>
-					<div class="swiper-slide explore__background">
+					<!-- <div class="swiper-slide explore__background">
 						<img src="/images/background_1.jpg" alt="">
 					</div>
 					<div class="swiper-slide explore__background">
 						<img src="/images/background_2.jpg" alt="">
-					</div>
+					</div> -->
 					<div class="swiper-slide explore__background">
 						<img src="/images/background_3.jpg" alt="">
 					</div>
@@ -68,10 +65,9 @@
 					</div>
 				</div>
 
-				<div class="swiper-button-prev button-prev"></div>
-				<div class="swiper-button-next button-next"></div>
+				<div class="swiper-button-prev explore__button-prev"></div>
+				<div class="swiper-button-next explore__button-next"></div>
 
-				<div class="swiper-scrollbar"></div>
 			</div>
 
 			<div class="container relative">
@@ -99,11 +95,9 @@
 						</li>
 					</ul>
 				</div>
-				<div class="sliders-places">
-					<div id="explore__slider-places" class="swiper">
-
+				<div class="explore__sliders-wrap">
+					<div class="swiper explore__slider-places">
 						<div class="swiper-wrapper explore__places">
-
 							<div class="swiper-slide">
 								<div class="explore__place">
 									<img src="/images/pointer.svg" alt="" class="explore__svg">
@@ -131,7 +125,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide explore__place">
+							<div class="swiper-slide">
 								<div class="explore__place">
 									<img src="/images/pointer.svg" alt="" class="explore__svg">
 									<div class="explore__place-wrap">
@@ -143,67 +137,126 @@
 						</div>
 
 					</div>
-					<div class="places-arrows">
-						<div class="swiper-button-prev places-button-prev"></div>
-						<div class="swiper-button-next places-button-next"></div>
-						<div class="swiper-pagination"></div>
+					<div class="explore__places-arrows">
+						<div class="swiper-button-prev explore__places-button-prev"></div>
+						<div class="swiper-button-next explore__places-button-next"></div>
+						<div class="swiper-pagination explore__places-pagination"></div>
 					</div>
 
 				</div>
-
 				<div class="explore__navigation">
 					<img class="explore__arrow" src="/images/arrow.svg" alt="">
 					<p class="explore__ref">SEE MORE </p>
 				</div>
 			</div>
 		</section>
-		<section class="about">
-			<span class="about__subtitle">HUNDREDS OF</span>
-			<h2 class="about__title">Activities for Everyone</h2>
 
-			<div class="swiper about__slider">
+		<section class="activities">
+			<div class="container">
+				<span class="activities__subtitle">HUNDREDS OF</span>
+				<h2 class="activities__title">Activities for Everyone</h2>
 
-				<div class="swiper-wrapper">
-
-					<div class="swiper-slide">
-						<div class="about__slide about__slide-1">
-							<div class="about__content">
-								<span class="about__activity">Hiking</span>
-								<span class="about__number">230 activites</span>
+				<div class="activities__slider-wrap">
+					<div class="swiper activities__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="activities__slide activities__slide-1">
+									<div class="activities__content">
+										<span class="activities__activity">Hiking</span>
+										<span class="activities__number">230 activites</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="activities__slide activities__slide-2">
+									<div class="activities__content">
+										<span class="activities__activity">Sailing</span>
+										<span class="activities__number">121 activites</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="activities__slide activities__slide-3">
+									<div class="activities__content">
+										<span class="activities__activity">Skiing</span>
+										<span class="activities__number">212 activites</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="activities__slide activities__slide-4">
+									<div class="activities__content">
+										<span class="activities__activity">Kayaking</span>
+										<span class="activities__number">512 activites</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="about__slide about__slide-2">
-							<div class="about__content">
-								<span class="about__activity">Sailing</span>
-								<span class="about__number">121 activites</span>
-							</div>
-						</div>
+
+					<div class="swiper-button-prev hide-button activities__button-prev">
+						<span class="activities__navigation">BACK</span>
 					</div>
-					<div class="swiper-slide">
-						<div class="about__slide about__slide-3">
-							<div class="about__content">
-								<span class="about__activity">Skiing</span>
-								<span class="about__number">212 activites</span>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="about__slide about__slide-4">
-							<div class="about__content">
-								<span class="about__activity">Kayaking</span>
-								<span class="about__number">512 activites</span>
-							</div>
-						</div>
+
+					<div class="swiper-button-next activities__button-next">
+						<span class="activities__navigation">NEXT</span>
 					</div>
 				</div>
-
-				<div class="swiper-button-prev activity__button-prev"></div>
-				<div class="swiper-button-next activity__button-next"></div>
-
+				<div class="activities__block"></div>
 			</div>
 		</section>
+
+		<div class="background-1"></div>
+
+		<section class="about">
+			<div class="container">
+				<div class="about__block-top"></div>
+				<span class="about__subtitle">About Us</span>
+				<h2 class="about__title">Our Philosophy</h2>
+				<div class="about__content">
+
+					<ul class="about__block-photo">
+						<li class="about__item-photo">
+							<img src="/images/photo_1.jpg" alt="">
+						</li>
+					</ul>
+
+					<ul class="about__block-text">
+						<li class="about__item-text">
+							<span class="about__number">01</span>
+							<div class="about__item-title">
+								<span class="about__character">Sustainable</span>
+								<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit,
+									aliquet mi sed, scelerisque tortor. Aliquam eu scelerisque quam, ac tristique dolor. Aliquam nulla
+									risus,</p>
+							</div>
+						</li>
+						<li class="about__item-text">
+							<span class="about__number">02</span>
+							<div class="about__item-title">
+								<span class="about__character">Fair & Share</span>
+								<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit,
+									aliquet mi sed, scelerisque tortor. Aliquam eu scelerisque quam, </p>
+							</div>
+						</li>
+						<li class="about__item-text">
+							<span class="about__number">03</span>
+							<div class="about__item-title">
+								<span class="about__character">Experience</span>
+								<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit,
+									aliquet mi sed, scelerisque tortor. Aliquam eu scelerisque quam, ac tristique </p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="about__block-bottom"></div>
+			</div>
+		</section>
+
+		<div class="background-2"></div>
+
+
+
 	</main>
 	<footer class="footer"></footer>
 	<script src="/js/libs/swiper-bundle.min.js"></script>
