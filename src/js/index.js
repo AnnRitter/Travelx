@@ -54,9 +54,12 @@ const maxheight_1 = 3240
 // const maxheight_2 = 
 window.addEventListener('scroll', event => {
 	let currentheight = window.pageYOffset
-	
+  
+	let minBlock = document.querySelector('.activities__slider-wrap')
+  console.log(minBlock.getBoundingClientRect().top - window.innerHeight/2);
+  
 	if (currentheight > minHeight_1 && currentheight < maxheight_1) {
-		console.log('условие 1');
+	
 		background_1.classList.add('visible')
 	} else if (currentheight > maxheight_1) {
 		console.log('условие 2');
@@ -65,6 +68,7 @@ window.addEventListener('scroll', event => {
 	} else {
 		console.log('условие 3');
 		background_2.classList.remove('visible')
+    background_1.classList.remove('visible')
 	}
 
 	
