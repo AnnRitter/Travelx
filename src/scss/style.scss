@@ -126,7 +126,6 @@
 
 .explore {
 
-
 	&__slider-background {
 		position: absolute;
 		top: 0;
@@ -453,6 +452,7 @@
 	margin-top: 1100px;
 	background-color: #fff;
 	position: relative;
+    height: 100vh;
 
 	&__block-top {
 		@include block();
@@ -524,4 +524,20 @@
 		left: 0;
 	}
 
+}
+
+.hotels {
+
+	background-color: #fff;
+	margin-top: 1000px;
+
+	&__subtitle {
+		@include subtitle();
+		padding-top: 100px
+	}
+
+	&__title {
+		@include title();
+		padding-bottom: 95px;
+	}
 }
