@@ -543,7 +543,7 @@
 .hotels {
 
 	background-color: #fff;
-	margin-top: 1000px;
+	// margin-top: 1000px;
 	padding-bottom: 114px;
 	position: relative;
 	height: 100vh;
@@ -683,8 +683,122 @@
 		letter-spacing: 5px;
 	}
 
+}
+.network {
+	background-color: #fff;
+	margin-top: 1000px;
+	position: relative;
+	height: auto;
 
+	&::before {
+		content: '';
+		@include block();
+		height: 400px;
+		top: -11%;
+		left: 0;
+	}
 
+	&__subtitle {
+		@include subtitle();
+	}
 
+	&__title {
+		@include title();
+	}
 
+	&__partners {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 180px;
+	}
+
+	&__partner:not(:last-child) {
+		margin-right: 130px;
+	}
+
+	&__reviews-wrap {
+		max-width: 1660px;
+		width: 100%;
+		height: auto;
+		background-image: url(/images/background_review.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 10px;
+		padding: 148px 0 109px 0;
+	}
+	
+
+	&__reviews {
+		display: flex;
+		justify-content: center;
+	
+	}
+
+	&__review {
+		position: relative;
+	}
+
+	&__review::before {
+		content: '“';
+		position: absolute;
+		font-family: 'Manrope', sans-serif;
+		font-size: 60px;
+		font-weight: 800;
+		color: #FF9921;
+		opacity: .4;
+		top: 0;
+		left: 10%;
+		line-height: 98px;
+		z-index: 3;
+	}
+
+	&__review::after {
+		content: '';
+		position: absolute;
+	}
+
+	&__review:not(:last-child) {
+		margin-right: 51px;
+	}
+
+	&__text-wrap {
+		position: relative;
+		max-width: 350px;
+		width: 100%;
+		height: 192px;
+		background-color: #fff;
+		border-radius: 10px;
+		display: flex;
+    align-items: center;
+		margin-bottom: 41px;
+		padding-left: 37px;
+		color: #474747;
+		font-family: 'Roboto',sans-serif;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 2;
+	}
+
+	&__info-wrap {
+		display: flex;
+		align-items: center;
+		color: #fff;
+	}
+
+	&__photo {
+		margin-right: 16px;
+	}
+
+	&__name {
+		font-family: 'Manrope', sans-serif;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	&__job {
+		font-family: 'Manrope', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+	}
 }
