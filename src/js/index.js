@@ -57,18 +57,19 @@ const about = document.querySelector('.about')
 window.addEventListener('scroll', event => {
 	let currentheight = window.pageYOffset
 	let minHeight_1 = activity.getBoundingClientRect().top 
-	let maxHeight_1 = about.getBoundingClientRect().top
-
+	// let maxHeight_1 = about.getBoundingClientRect().top
+	let maxHeight_1 = 3900
+console.log(currentheight);
 	if (currentheight > minHeight_1 && currentheight < maxHeight_1) {
-		console.log(`условие 1, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
+		// console.log(`условие 1, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
 		
 		background_1.classList.add('visible')
 	} else if (currentheight > maxHeight_1) {
-		console.log(`условие 2, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
+		// console.log(`условие 2, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
 		background_1.classList.remove('visible')
 		background_2.classList.add('visible')
 	} else {
-		console.log(`условие 3, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
+		// console.log(`условие 3, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
 		background_2.classList.remove('visible')
 		background_1.classList.remove('visible')
 	}
