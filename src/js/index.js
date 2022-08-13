@@ -1,10 +1,8 @@
 const backgroundSwiper = new Swiper('.explore__slider-background', {
-	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 1,
 
-	// Navigation arrows
 	navigation: {
 		nextEl: '.explore__button-next',
 		prevEl: '.explore__button-prev',
@@ -13,17 +11,15 @@ const backgroundSwiper = new Swiper('.explore__slider-background', {
 });
 
 const swiper = new Swiper('.explore__slider-places', {
-	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 3,
 
-
-	// Navigation arrows
 	navigation: {
 		nextEl: '.explore__places-button-next',
 		prevEl: '.explore__places-button-prev',
 	},
+
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'fraction',
@@ -31,23 +27,19 @@ const swiper = new Swiper('.explore__slider-places', {
 
 });
 
-
-
 const activitySwiper = new Swiper('.activities__slider', {
-	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 4,
 
-	// Navigation arrows
 	navigation: {
 		nextEl: '.activities__button-next',
 		prevEl: '.activities__button-prev',
 	},
 
 });
-// - window.innerHeight / 2
 
+// change background
 const background_1 = document.querySelector('.background-1')
 const background_2 = document.querySelector('.background-2')
 
@@ -56,13 +48,13 @@ const about = document.querySelector('.about')
 
 window.addEventListener('scroll', event => {
 	let currentheight = window.pageYOffset
-	let minHeight_1 = activity.getBoundingClientRect().top 
+	let minHeight_1 = activity.getBoundingClientRect().top
 	// let maxHeight_1 = about.getBoundingClientRect().top
 	let maxHeight_1 = 3900
-console.log(currentheight);
+	// console.log(currentheight);
 	if (currentheight > minHeight_1 && currentheight < maxHeight_1) {
 		// console.log(`условие 1, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
-		
+
 		background_1.classList.add('visible')
 	} else if (currentheight > maxHeight_1) {
 		// console.log(`условие 2, current: ${currentheight}, min: ${minHeight_1}, max: ${maxHeight_1}`);
@@ -76,3 +68,24 @@ console.log(currentheight);
 
 
 })
+
+//change photos in list 
+const titles = document.querySelectorAll('.about__character')
+const photos = document.querySelectorAll('.about__item-photo')
+
+titles.forEach(title => {
+	title.addEventListener('click', changePhoto)
+})
+
+function changePhoto(event) {
+	
+	photos.forEach(photo => {
+		photo.classList.remove('show')
+	})
+
+	const currentPhoto = document.querySelector(`[data-id="${event.target.dataset.id}"`)
+	currentPhoto.classList.add('show')
+
+}
+
+document.querySelector('.about__character').click()
