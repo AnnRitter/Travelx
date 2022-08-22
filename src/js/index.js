@@ -10,6 +10,10 @@ const backgroundSwiper = new Swiper('.explore__slider-background', {
 
 });
 
+function addZero(num) {
+	return (num > 9) ? num : '0' + num;
+}
+
 const swiper = new Swiper('.explore__slider-places', {
 	direction: 'horizontal',
 	loop: true,
@@ -23,7 +27,17 @@ const swiper = new Swiper('.explore__slider-places', {
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'fraction',
-	}
+		formatFractionCurrent: addZero,
+		formatFractionTotal: addZero,
+		
+
+		// renderFraction: function (index, className) {
+		// const current = document.querySelector('.swiper-pagination-current')
+		// 	console.log(current);
+		// 	return '<span class="' + className + '">' + (menu[index]) + '</span>';
+		// }
+	},
+	
 
 });
 
@@ -78,7 +92,7 @@ titles.forEach(title => {
 })
 
 function changePhoto(event) {
-	
+
 	photos.forEach(photo => {
 		photo.classList.remove('show')
 	})
