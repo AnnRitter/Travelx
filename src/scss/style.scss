@@ -128,12 +128,17 @@
 
 
 .explore {
+	height: 100vh;
 
 	&__slider-background {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
+	}
+
+	.swiper-wrapper {
+		height: 100vh;
 	}
 
 	&__background {
@@ -173,7 +178,7 @@
 	&__headline {
 		max-width: 1009px;
 		width: 100%;
-		margin: 0 auto 295px;
+		margin: 0 auto 200px;
 		z-index: 3;
 		position: relative;
 	}
@@ -218,8 +223,8 @@
 
 	&__sliders-wrap {
 		position: relative;
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 108px;
 	}
 
 	&__slider-places {
@@ -256,9 +261,7 @@
 	}
 
 	&__places-pagination {
-		width: 50px;
-		position: absolute;
-		left: 0;
+
 		top: 60px;
 		color: rgba(255, 255, 255, 0.3);
 		display: flex;
@@ -629,7 +632,7 @@
 		@include block();
 		background-color: #f4f4f4;
 		height: 400px;
-		bottom: -10%;
+		bottom: -12%;
 		left: 0;
 	}
 
@@ -729,8 +732,8 @@
 
 	&__info {
 		position: relative;
-		max-width: 321px;
-		width: 100%;
+		width: 321px;
+		// width: 100%;
 		height: 75px;
 		border: 1px solid #DBDBDB;
 		border-radius: 5px;
@@ -746,7 +749,7 @@
 	&__submenu {
 		position: absolute;
 		top: 100px;
-		// visibility: hidden;
+		display: none;
 		max-width: 321px;
 		width: 100%;
 		border: 1px solid #DBDBDB;
@@ -758,8 +761,7 @@
 	}
 
 	&__subitem {
-		padding-top: 27px;
-		padding-left: 27px;
+		padding: 14px 10px 14px 27px;
 	}
 
 	&__subitem:last-child {
@@ -767,7 +769,7 @@
 	}
 
 	&__subitem:hover {
-		background-color: inherit;
+		background-color: #DBDBDB;
 	}
 
 	&__search {
@@ -779,8 +781,13 @@
 		font-size: 18px;
 		letter-spacing: 5px;
 		z-index: 4;
+		border-radius: 5px;
 	}
 
+}
+
+.active {
+	display: block;
 }
 
 .network {

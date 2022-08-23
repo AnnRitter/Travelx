@@ -29,7 +29,7 @@ const swiper = new Swiper('.explore__slider-places', {
 		type: 'fraction',
 		formatFractionCurrent: addZero,
 		formatFractionTotal: addZero,
-		
+
 
 		// renderFraction: function (index, className) {
 		// const current = document.querySelector('.swiper-pagination-current')
@@ -37,7 +37,7 @@ const swiper = new Swiper('.explore__slider-places', {
 		// 	return '<span class="' + className + '">' + (menu[index]) + '</span>';
 		// }
 	},
-	
+
 
 });
 
@@ -103,3 +103,33 @@ function changePhoto(event) {
 }
 
 document.querySelector('.about__character').click()
+
+//toggle submenu 
+
+window.addEventListener('click', toggleMenu)
+
+function toggleMenu(e) {
+
+	if (e.target.classList.contains('hotels__info')) {
+		const targetSubmenu = e.target.nextElementSibling
+		targetSubmenu.classList.add('active')
+	}
+
+	if (e.target.classList.contains('hotels__subitem')) {
+		const submenu = e.target.closest('.hotels__submenu')
+		submenu.classList.remove('active')
+
+		const info = submenu.previousElementSibling
+		const content = e.target.textContent
+		info.textContent = content
+		console.log(info);
+	} 
+	if (!e.target.classList.contains('hotels__info') || e.target.classList.contains('hotels__subitem')) {
+		const items = document.querySelectorAll('.hotels__submenu')
+		.forEach(item => {
+			item.classList.remove('active')
+		})
+	}
+
+
+}
