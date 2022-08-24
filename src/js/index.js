@@ -1,45 +1,40 @@
-const backgroundSwiper = new Swiper('.explore__slider-background', {
+
+// background slider
+const backgroundSwiper = new Swiper('.slider-background', {
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 1,
 
 	navigation: {
-		nextEl: '.explore__button-next',
-		prevEl: '.explore__button-prev',
+		nextEl: '.slider-background__button-next',
+		prevEl: '.slider-background__button-prev',
 	},
 
+});
+
+// slider places
+const swiper = new Swiper('.slider-places__wrap', {
+	direction: 'horizontal',
+	loop: true,
+	slidesPerView: 3,
+
+	navigation: {
+		nextEl: '.slider-places__button-next',
+		prevEl: '.slider-places__button-prev',
+	},
+
+	pagination: {
+		el: '.slider-places__pagination',
+		type: 'fraction',
+		formatFractionCurrent: addZero,
+		formatFractionTotal: addZero,
+	},
 });
 
 function addZero(num) {
 	return (num > 9) ? num : '0' + num;
 }
 
-const swiper = new Swiper('.explore__slider-places', {
-	direction: 'horizontal',
-	loop: true,
-	slidesPerView: 3,
-
-	navigation: {
-		nextEl: '.explore__places-button-next',
-		prevEl: '.explore__places-button-prev',
-	},
-
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'fraction',
-		formatFractionCurrent: addZero,
-		formatFractionTotal: addZero,
-
-
-		// renderFraction: function (index, className) {
-		// const current = document.querySelector('.swiper-pagination-current')
-		// 	console.log(current);
-		// 	return '<span class="' + className + '">' + (menu[index]) + '</span>';
-		// }
-	},
-
-
-});
 
 const activitySwiper = new Swiper('.activities__slider', {
 	direction: 'horizontal',
