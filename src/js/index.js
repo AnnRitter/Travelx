@@ -1,31 +1,40 @@
-const backgroundSwiper = new Swiper('.explore__slider-background', {
+
+// background slider
+const backgroundSwiper = new Swiper('.slider-background', {
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 1,
 
 	navigation: {
-		nextEl: '.explore__button-next',
-		prevEl: '.explore__button-prev',
+		nextEl: '.slider-background__button-next',
+		prevEl: '.slider-background__button-prev',
 	},
 
 });
 
-const swiper = new Swiper('.explore__slider-places', {
+// slider places
+const swiper = new Swiper('.slider-places__wrap', {
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 3,
 
 	navigation: {
-		nextEl: '.explore__places-button-next',
-		prevEl: '.explore__places-button-prev',
+		nextEl: '.slider-places__button-next',
+		prevEl: '.slider-places__button-prev',
 	},
 
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.slider-places__pagination',
 		type: 'fraction',
-	}
-
+		formatFractionCurrent: addZero,
+		formatFractionTotal: addZero,
+	},
 });
+
+function addZero(num) {
+	return (num > 9) ? num : '0' + num;
+}
+
 
 const activitySwiper = new Swiper('.activities__slider', {
 	direction: 'horizontal',
@@ -78,7 +87,7 @@ titles.forEach(title => {
 })
 
 function changePhoto(event) {
-	
+
 	photos.forEach(photo => {
 		photo.classList.remove('show')
 	})
@@ -89,3 +98,33 @@ function changePhoto(event) {
 }
 
 document.querySelector('.about__character').click()
+
+//toggle submenu 
+
+window.addEventListener('click', toggleMenu)
+
+function toggleMenu(e) {
+
+	if (e.target.classList.contains('hotels__info')) {
+		const targetSubmenu = e.target.nextElementSibling
+		targetSubmenu.classList.add('active')
+	}
+
+	if (e.target.classList.contains('hotels__subitem')) {
+		const submenu = e.target.closest('.hotels__submenu')
+		submenu.classList.remove('active')
+
+		const info = submenu.previousElementSibling
+		const content = e.target.textContent
+		info.textContent = content
+		console.log(info);
+	} 
+	if (!e.target.classList.contains('hotels__info') || e.target.classList.contains('hotels__subitem')) {
+		const items = document.querySelectorAll('.hotels__submenu')
+		.forEach(item => {
+			item.classList.remove('active')
+		})
+	}
+
+
+}
