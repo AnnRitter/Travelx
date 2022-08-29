@@ -59,7 +59,7 @@
 .container.relative {
 	position: relative;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .header {
@@ -125,11 +125,13 @@
 			margin-right: 65px;
 		}
 	}
+
 }
 
 .explore {
 	height: 100vh;
 	padding-bottom: 81px;
+
 	&__wrap {
 		padding-top: 378px;
 	}
@@ -1068,4 +1070,3 @@
 	transition: 1.2s ease-in-out;
 	z-index: 2;
 }
-

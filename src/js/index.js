@@ -1,4 +1,3 @@
-
 // background slider
 const backgroundSwiper = new Swiper('.slider-background', {
 	direction: 'horizontal',
@@ -100,7 +99,6 @@ function changePhoto(event) {
 document.querySelector('.about__character').click()
 
 //toggle submenu 
-
 window.addEventListener('click', toggleMenu)
 
 function toggleMenu(e) {
@@ -118,13 +116,12 @@ function toggleMenu(e) {
 		const content = e.target.textContent
 		info.textContent = content
 		console.log(info);
-	} 
+	}
 	if (!e.target.classList.contains('hotels__info') || e.target.classList.contains('hotels__subitem')) {
 		const items = document.querySelectorAll('.hotels__submenu')
-		.forEach(item => {
-			item.classList.remove('active')
-		})
+			.forEach(item => {
+				item.classList.remove('active')
+			})
 	}
-
-
 }
+
