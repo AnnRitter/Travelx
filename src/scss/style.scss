@@ -168,7 +168,7 @@
 
 	&__links {
 		position: absolute;
-		top: 43%;
+		top: 50%;
 		left: 1%;
 		z-index: 3;
 	}
@@ -181,7 +181,7 @@
 		position: absolute;
 		display: flex;
 		align-items: center;
-		bottom: 9%;
+		bottom: 0;
 		left: 1%;
 		z-index: 3;
 		writing-mode: tb-rl;
@@ -1069,4 +1069,72 @@
 	// transition: all 0.5s;
 	transition: 1.2s ease-in-out;
 	z-index: 2;
+}
+
+@media (max-width: 1440px) {
+
+	.header {
+
+		&__item {
+			font-size: 14px;
+		}
+
+		&__logo {
+			width: 130px;
+		}
+	}
+
+	.explore {
+
+		&__wrap {
+			padding-top: 270px;
+		}
+
+		&__subtitle-main{
+			font-size: 24px;
+		}
+
+		&__title {
+			font-size: 150px;
+			display: flex;
+			justify-content: center;
+		}
+
+		&__ref {
+			font-size: 10px;
+		}
+	}
+
+	.slider-places {
+
+		&__wrap {
+			max-width: 1095px;
+		}
+
+		&__place {
+			max-width: 330px;
+			height: 80px;
+		}
+
+		&__name {
+			font-size: 16px;
+		}
+
+		&__subtitle {
+			font-size: 10px;
+		}
+
+		.swiper-pagination-total {
+			font-size: 18px;
+		}
+
+		.swiper-pagination-current {
+			font-size: 24px;
+		}
+
+		&__button-next::after,
+		&__button-prev::after {
+			font-size: 14px;
+		}
+	}
 }
