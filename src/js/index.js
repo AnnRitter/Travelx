@@ -125,3 +125,43 @@ function toggleMenu(e) {
 	}
 }
 
+const triggers = document.querySelectorAll('.header__item')
+
+const background = document.querySelector('.dropdownBackground')
+
+const nav = document.querySelector('.header__navigation')
+
+triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter))
+triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
+
+function handleEnter() {
+	this.classList.add('trigger-enter')
+	setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150)
+	background.classList.add('open')
+
+	const dropdown = this.querySelector('.dropdown')
+
+	const dropdownCoords = dropdown.getBoundingClientRect()
+	const navCoords = nav.getBoundingClientRect()
+	console.log(navCoords);
+	const coords = {
+		height: dropdownCoords.height,
+		width: dropdownCoords.width,
+		top: dropdownCoords.top,
+		left: dropdownCoords.left,
+	}
+	console.log(dropdownCoords);
+console.log('height: ', coords.height);
+console.log('width: ', coords.width);
+console.log('top: ', coords.top);
+console.log('left: ', coords.left);
+
+	background.style.setProperty('height', `${coords.height}px`)
+	background.style.setProperty('width', `${coords.width}px`)
+	background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`)
+}
+
+function handleLeave() {
+	this.classList.remove('trigger-enter', 'trigger-enter-active')
+	background.classList.remove('open')
+}
