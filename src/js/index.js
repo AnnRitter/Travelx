@@ -39,11 +39,15 @@ const activitySwiper = new Swiper('.activities__slider', {
 	direction: 'horizontal',
 	loop: true,
 	slidesPerView: 4,
+	spaceBetween: 20,
 
 	navigation: {
 		nextEl: '.activities__button-next',
 		prevEl: '.activities__button-prev',
 	},
+
+	
+
 
 });
 
@@ -151,10 +155,10 @@ function handleEnter() {
 		left: dropdownCoords.left,
 	}
 	console.log(dropdownCoords);
-console.log('height: ', coords.height);
-console.log('width: ', coords.width);
-console.log('top: ', coords.top);
-console.log('left: ', coords.left);
+	console.log('height: ', coords.height);
+	console.log('width: ', coords.width);
+	console.log('top: ', coords.top);
+	console.log('left: ', coords.left);
 
 	background.style.setProperty('height', `${coords.height}px`)
 	background.style.setProperty('width', `${coords.width}px`)
