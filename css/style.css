@@ -354,37 +354,37 @@ span {
 }
 
 .slider-background__slide-1 {
-  background-image: url("/images/background_main.jpg");
+  background-image: url("../images/background_main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider-background__slide-2 {
-  background-image: url("/images/background_3.jpg");
+  background-image: url("../images/background_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider-background__slide-3 {
-  background-image: url("/images/background_4.jpg");
+  background-image: url("../images/background_4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider-background__slide-4 {
-  background-image: url("/images/background_5.jpg");
+  background-image: url("../images/background_5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider-background__slide-5 {
-  background-image: url("/images/background_6.jpg");
+  background-image: url("../images/background_6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slider-background__slide-6 {
-  background-image: url("/images/background_7.jpg");
+  background-image: url("../images/background_7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -577,23 +577,23 @@ span {
 }
 
 .activities__slide-1 {
-  background-image: url("/images/picture_1.jpg");
+  background-image: url("../images/picture_1.jpg");
 }
 
 .activities__slide-2 {
-  background-image: url("/images/picture_2.jpg");
+  background-image: url("../images/picture_2.jpg");
 }
 
 .activities__slide-3 {
-  background-image: url("/images/picture_3.jpg");
+  background-image: url("../images/picture_3.jpg");
 }
 
 .activities__slide-4 {
-  background-image: url("/images/picture_4.jpg");
+  background-image: url("../images/picture_4.jpg");
 }
 
 .activities__button-prev {
-  background-image: url("/images/arrow_left.svg");
+  background-image: url("../images/arrow_left.svg");
   background-repeat: no-repeat;
   max-width: 43px;
   width: 100%;
@@ -602,7 +602,7 @@ span {
 }
 
 .activities__button-next {
-  background-image: url("/images/arrow_right.svg");
+  background-image: url("../images/arrow_right.svg");
   max-width: 43px;
   width: 100%;
   background-repeat: no-repeat;
@@ -636,7 +636,7 @@ span {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -3;
-  background-image: url("/images/background_1.jpg");
+  background-image: url("../images/background_1.jpg");
 }
 
 .background-2 {
@@ -650,7 +650,7 @@ span {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -3;
-  background-image: url("/images/background_5.jpg");
+  background-image: url("../images/background_5.jpg");
 }
 
 .visible {
@@ -753,21 +753,21 @@ span {
 }
 
 .about__photo-1 {
-  background-image: url("/images/photo_1.jpg");
+  background-image: url("../images/photo_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about__photo-2 {
-  background-image: url("/images/photo_2.jpg");
+  background-image: url("../images/photo_2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about__photo-3 {
-  background-image: url("/images/photo_3.jpg");
+  background-image: url("../images/photo_3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -972,7 +972,7 @@ span {
 
 .hotels__info::before {
   content: "";
-  background-image: url("/images/Vector.svg");
+  background-image: url("../images/Vector.svg");
   position: absolute;
   top: 50%;
   right: 9%;
@@ -1178,7 +1178,7 @@ span {
 
 .network__reviews-wrap {
   width: 100%;
-  background-image: url("/images/background_review.jpg");
+  background-image: url("../images/background_review.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -1379,19 +1379,19 @@ span {
 }
 
 .footer__instagram {
-  background-image: url("/images/footer_instagram.svg");
+  background-image: url("../images/footer_instagram.svg");
 }
 
 .footer__dribble {
-  background-image: url("/images/footer_dribble.svg");
+  background-image: url("../images/footer_dribble.svg");
 }
 
 .footer__twitter {
-  background-image: url("/images/footer_twitter.svg");
+  background-image: url("../images/footer_twitter.svg");
 }
 
 .footer__youtube {
-  background-image: url("/images/footer_youtube.svg");
+  background-image: url("../images/footer_youtube.svg");
 }
 
 .show {
